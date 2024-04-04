@@ -3,7 +3,7 @@ import { WorkWithUsElementData } from '../assets/data';
 
 function WorkWithUs(props) {
     return (
-        <div className='flex py-[50px] bg-[#f3f1ff]'>
+        <div className='flex py-[50px] bg-[#f3f1ff] my-[50px]'>
         <div className='flex flex-col'>
             <h1 className='font-[700] text-[30px] leading-[29px] font-sans mt-[12px]'>Work with us</h1>
             <div className="rounded-2xl bg-white  pt-8 max-w-[30rem] shadow-lg"> 

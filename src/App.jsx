@@ -14,7 +14,7 @@ function App() {
   return (
     <>
       <Navbar/>
-      <div className="   container pt-[30px]  flex flex-col w-[800px]">
+      <div className="   container pt-[30px]  flex flex-col w-[1000px]">
       <MiddleContent/>
       <Footer/>
       </div>

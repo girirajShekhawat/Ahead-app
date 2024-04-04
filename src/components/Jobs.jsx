@@ -4,7 +4,7 @@ import { vacancies } from '../assets/data';
 function Jobs(props) {
     return (
         <div>
-              <div className='flex flex-col py-[50px]'>
+              <div className='flex flex-col py-[50px] my-[50px]'>
             <h1 className='text-4xl font-bold'>Open vacancies</h1>
             <div className='flex gap-8 mt-12'>
                 {vacancies.map((job)=>(

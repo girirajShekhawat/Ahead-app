@@ -3,7 +3,7 @@ import { selfImprovementElementData } from '../assets/data';
 
 function SelfImprovement(props) {
     return (
-        <div className='flex flex-col py-[50px]'>
+        <div className='flex flex-col py-[50px] my-[50px]'>
         <div>
             <p className='text-sm font-bold  '>Wrong with self-improvement & how we're fixing it.</p>
             <h1 className='font-[700] text-[30px] leading-[29px] font-sans mt-[12px]'>Self-improvement.Ugh.</h1>
