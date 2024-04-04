@@ -20,7 +20,7 @@ function MainBanner(props) {
             </div>
             </div>
 
-            {/* Banners Right part */}
+            {/* Banner's Right part */}
             <div>
               <div className='rounded-full border-2 border-dashed border-white p-20 relative'>
                 <img src='src\assets\TeddyImage.svg' alt='teddyImg' className='h-[70px] w-[70px]  absolute top-0 right-9 rotate-1'/>

@@ -1,11 +1,24 @@
 import React from 'react';
 import TextBox from './TextBox';
+import MainBanner from './MainBanner';
+import SideMovingBox from './SideMovingBox';
 
 function MiddleContent(props) {
     return (
  <div> 
+        
+        <div className='pb-[50px]'>
+            <MainBanner/>
+        </div>
+         <div className='py-[50px] px-5'>
+            <TextBox/>
+         </div>
+         <div className='py-[50px]'>
+            <SideMovingBox/>
+         </div>
+      
        {/* meet ahead app banner */}
-        <div className='bg-[#fef7f1] flex '>
+        <div className='bg-[#fef7f1] flex py-[50px]'>
             <div className='flex flex-col'>
             <p>Buit out of the frustration</p>
             <h1>Meet the ahead app</h1>
@@ -25,13 +38,13 @@ function MiddleContent(props) {
       
         
   {/*self improvement banner  */}
-        <div>
+        <div className='flex flex-col py-[50px]'>
             <div>
                 <p>Wrong with self-improvement & how we're fixing it.</p>
                 <h1>Self-improvement.Ugh.</h1>
             </div>
-            <div>
-                <ul>
+            <div className='flex justify-end'>
+                <ul className='flex flex-col '>
                    <li>
                     <h3>It's not as easy as 1-2-3.</h3>
                     <p>The journey of change may be long, but our sessions are quick, We get to the point and tell you what you want to know (and nothing else.)</p>
@@ -63,8 +76,11 @@ function MiddleContent(props) {
                     </li>
                 </ul>
             </div>
-
+            
+            <div className='py-[50px]'>
             <TextBox/>
+            </div>
+            
 
         {/* What other think of you box */}
             <div>
@@ -73,7 +89,7 @@ function MiddleContent(props) {
 
 
          {/*Before you get started*/}
-           <div>
+           <div className='flex flex-col items-center py-[50px]'>
             <p>We take privacy seriously</p>
             <h1>Before you get started</h1>
             <p>"We won't share your answers with anyone(and won't ever tell you which friends said about you)"</p>
@@ -92,12 +108,12 @@ function MiddleContent(props) {
 
 
            {/* Work with us banner */}
-           <div>
-            <div>
+           <div className='flex py-[50px]'>
+            <div className='flex flex-col'>
                 <h1>Work with us</h1>
                 <div>
                     <img src='src\assets\TeddyImg2.svg' alt='teddy Img'/>
-                    <H1>About</H1>
+                    <h1>About</h1>
                     <p>At ahead our goal is to make self-improvement fun and lasting. We know there's a way how to make it work. And that's what ahead is all about!</p>
                 <div>
                     <h1>Product</h1> 
@@ -106,7 +122,7 @@ function MiddleContent(props) {
                 </div>
 
             </div>
-            <div>
+            <div className='flex flex-col'>
                 <h1>ahead</h1>
                 <div>
                     <h1>Power through, even when the going gets tough</h1>
@@ -148,7 +164,9 @@ function MiddleContent(props) {
            </div>
 
            {/* Open vacancies banner */}
-           <div>
+           <div className='flex flex-col py-[50px]'>
+            <h1>Open vacancies</h1>
+            <div className='flex '>
             <div>
                 <h1>Senior Full-Stack Engineer</h1>
                 <ul>
@@ -172,6 +190,7 @@ function MiddleContent(props) {
                     <li>Berlin or remote </li>
                     <li>$65-85K and share options</li>
                 </ul>
+            </div>
             </div>
            </div>
 
