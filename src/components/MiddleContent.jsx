@@ -68,38 +68,39 @@ function MiddleContent(props) {
   {/*self improvement banner  */}
         <div className='flex flex-col py-[50px]'>
             <div>
-                <p>Wrong with self-improvement & how we're fixing it.</p>
-                <h1>Self-improvement.Ugh.</h1>
+                <p className='text-sm font-bold  '>Wrong with self-improvement & how we're fixing it.</p>
+                <h1 className='font-[700] text-[30px] leading-[29px] font-sans mt-[12px]'>Self-improvement.Ugh.</h1>
             </div>
-            <div className='flex justify-end'>
-                <ul className='flex flex-col '>
+            <div className='flex justify-end  timeline px-20 pt-14 h-96 overflow-y-scroll'>
+                <ul className='flex flex-col border-l-2 border-l-violet-300    gap-16 relative'>
+                <div style={{left:"-12px"}} className="absolute">🟣</div>
                    <li>
-                    <h3>It's not as easy as 1-2-3.</h3>
+                    <h3 className='text-sm font-bold  '>It's not as easy as 1-2-3.</h3>
                     <p>The journey of change may be long, but our sessions are quick, We get to the point and tell you what you want to know (and nothing else.)</p>
                    </li>
                    <li>
-                    <h3>Old habits are hard to break.</h3>
+                    <h3 className='text-sm font-bold  '>Old habits are hard to break.</h3>
                     <p>And bad behaviors die hard. Fortunately, we give you great, science-backed techniques to use.</p>
                    </li>
                    <li>
-                    <h3>You and your motivation don't have a long-term relationship.</h3>
+                    <h3 className='text-sm font-bold  '>You and your motivation don't have a long-term relationship.</h3>
                     <p>Luckily, we can proactively prepare you for the marathone, not just the race. Effective, memorable exercisewill help you stick to your goals.</p>
                    </li>
                    <li>
-                    <h3>Books just don't offer practical solutions.</h3>
+                    <h3 className='text-sm font-bold  '>Books just don't offer practical solutions.</h3>
                     <p>Books just don't offer practical solutions, and for practical solutions we need a experince's advise.</p>
                    </li>
                    <li>
-                   <h3>You and your motivation don't have a long-term relationship.</h3>
+                   <h3 className='text-sm font-bold  ' >You and your motivation don't have a long-term relationship.</h3>
                     <p>Luckily, we can proactively prepare you for the marathone, not just the race. Effective, memorable exercisewill help you stick to your goals.</p>
                    </li>
-                   <li><h3>It's not as easy as 1-2-3.</h3>
+                   <li><h3 className='text-sm font-bold  '>It's not as easy as 1-2-3.</h3>
                     <p>The journey of change may be long, but our sessions are quick, We get to the point and tell you what you want to know (and nothing else.)</p>
                     </li>
-                   <li><h3>You and your motivation don't have a long-term relationship.</h3>
+                   <li><h3 className='text-sm font-bold  '>You and your motivation don't have a long-term relationship.</h3>
                     <p>Luckily, we can proactively prepare you for the marathone, not just the race. Effective, memorable exercisewill help you stick to your goals.</p>
                     </li>
-                   <li><h3>Old habits are hard to break.</h3>
+                   <li><h3 className='text-sm font-bold  '>Old habits are hard to break.</h3>
                     <p>And bad behaviors die hard. Fortunately, we give you great, science-backed techniques to use.</p>
                     </li>
                 </ul>
@@ -117,20 +118,20 @@ function MiddleContent(props) {
 
 
          {/*Before you get started*/}
-           <div className='flex flex-col items-center py-[50px]'>
-            <p>We take privacy seriously</p>
-            <h1>Before you get started</h1>
-            <p>"We won't share your answers with anyone(and won't ever tell you which friends said about you)"</p>
+           <div className='flex flex-col items-center  py-[50px]'>
+            <p className='text-sm font-bold  '>We take privacy seriously</p>
+            <h1 className='font-[700] text-[30px] leading-[29px] font-sans mt-[12px]'>Before you get started</h1>
+            <p className="text-xl font-normal mt-[12px] text-wrap mx-[90px] items-center leading-[29px] text-center ">"We won't share your answers with anyone(and  won't ever tell you  which friends said about you)"  </p>
             
-            <p>with love, 
+            <p className='text-sm font-bold mt-[17px] '>with love, 
                 {/* here we need the aniamtion*/}
                 <span>Team ahead app</span>
             </p>
            
-            <div className='h-[40px] w-[127px]   bg-[#0d0c22] rounded-full   flex items-center pl-[20px] pr-[20px]  ml-[12px]'>
+            <div className='h-[40px] w-[127px]   bg-[#0d0c22] rounded-full   flex items-center pl-[20px] pr-[20px]  ml-[12px] mt-[27px]'>
                 <button className='text-[13px] text-white h-[38px] w-[87px] leading-[13px] font-sans font-[600]'>Start a test</button>
             </div>
-            <p>Takes only 5 minutes</p>
+            <p className='text-sm mt-[10px]'>Takes only 5 minutes</p>
 
            </div>
 
@@ -231,3 +232,55 @@ function MiddleContent(props) {
 }
 
 export default MiddleContent;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{/* <div className='flex flex-col py-[50px]'>
+<div>
+    <p>Wrong with self-improvement & how we're fixing it.</p>
+    <h1>Self-improvement.Ugh.</h1>
+</div>
+<div className='flex justify-end'>
+    <ul className='flex flex-col '>
+       <li>
+        <h3>It's not as easy as 1-2-3.</h3>
+        <p>The journey of change may be long, but our sessions are quick, We get to the point and tell you what you want to know (and nothing else.)</p>
+       </li>
+       <li>
+        <h3>Old habits are hard to break.</h3>
+        <p>And bad behaviors die hard. Fortunately, we give you great, science-backed techniques to use.</p>
+       </li>
+       <li>
+        <h3>You and your motivation don't have a long-term relationship.</h3>
+        <p>Luckily, we can proactively prepare you for the marathone, not just the race. Effective, memorable exercisewill help you stick to your goals.</p>
+       </li>
+       <li>
+        <h3>Books just don't offer practical solutions.</h3>
+        <p>Books just don't offer practical solutions, and for practical solutions we need a experince's advise.</p>
+       </li>
+       <li>
+       <h3>You and your motivation don't have a long-term relationship.</h3>
+        <p>Luckily, we can proactively prepare you for the marathone, not just the race. Effective, memorable exercisewill help you stick to your goals.</p>
+       </li>
+       <li><h3>It's not as easy as 1-2-3.</h3>
+        <p>The journey of change may be long, but our sessions are quick, We get to the point and tell you what you want to know (and nothing else.)</p>
+        </li>
+       <li><h3>You and your motivation don't have a long-term relationship.</h3>
+        <p>Luckily, we can proactively prepare you for the marathone, not just the race. Effective, memorable exercisewill help you stick to your goals.</p>
+        </li>
+       <li><h3>Old habits are hard to break.</h3>
+        <p>And bad behaviors die hard. Fortunately, we give you great, science-backed techniques to use.</p>
+        </li>
+    </ul>
+</div> */}
