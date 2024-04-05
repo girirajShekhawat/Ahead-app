@@ -2,7 +2,7 @@
  
  
 
-# This projects shows the UI implementation of Dribble's Designer page.
+# This projects shows the UI implementation of a Designer's Design.
 
 ## Tech-Stack Used
 ReactJs , React-hooks, Tailwind css 
