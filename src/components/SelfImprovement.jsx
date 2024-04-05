@@ -10,7 +10,7 @@ function SelfImprovement(props) {
             <img src='src\assets\blue-ghost.webp' alt='teddyImg' className='h-[70px] w-[70px]  absolute  top-5 left-[420px] rotate-1 '/>
         </div>
         <div className=' '>
-        <div className='flex sm:justify-center ml-5 sm:ml-[0px]  timeline sm:pl-[50px] mt-14 h-96 overflow--y-scroll  no-scrollbar  '>
+        <div className='flex sm:justify-center ml-5 sm:ml-[0px]    sm:pl-[50px] mt-14 h-96 overflow--y-scroll  no-scrollbar  '>
             <ul className='flex flex-col border-l-2 border-l-violet-300  h-96 overflow-y-scroll   no-scrollbar   gap-10   '>
             
 
