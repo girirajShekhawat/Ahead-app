@@ -41,12 +41,12 @@ function MainBanner(props) {
             <div>
               <div className='rounded-full border-2 border-dashed border-white p-16 relative'>
                  {/* circle    */}
-                 <span className='h-[30px] w-[30px] rounded-full bg-[#f1c7c7] absolute right-[260px] -top-[42px]'></span>
+                 <span className='h-[30px] w-[30px] rounded-full bg-[#f1c7c7] absolute right-[50px] -top-[42px]'></span>
                 <img src='src\assets\TeddyImage.svg' alt='teddyImg' className='h-[70px] w-[70px]  absolute top-4 right-9 -rotate-[40deg]'/>
                 <img src='src\assets\newGhost.png' alt='teddyImg' className='h-[70px] w-[70px]  absolute top-5 left-9 rotate-[220deg]'/>
                 <img src='src\assets\blue-ghost.webp' alt='teddyImg' className='h-[70px] w-[70px]  absolute -bottom-[30px] left-[190px] rotate-1 '/>
                 <img src='src\assets\blue-ghost.webp' alt='teddyImg' className='h-[30px] w-[30px]  absolute bottom-[90px] left-[390px] rotate-5 '/>
-                <img src='src\assets\TeddyImage.svg' alt='teddyImg' className='h-[40px] w-[40px]  absolute top-[190px] -left-[20px] -rotate-[4deg]'/>
+                <img src='src\assets\TeddyImage.svg' alt='teddyImg' className='h-[40px] w-[40px]  absolute top-[190px] -left-[20px] -rotate-[4 deg]'/>
                 <div className='bg-[#e2dbfd] flex h-[310px] w-[310px] rounded-full items-center  justify-start  object-contain'>
                     <img src='src\assets\aheadAppAssets.jpg' alt="Vaochar Img" className='h-[120px] w-[120px] rounded-lg '/>
                     <img src='src\assets\AheadAppHomeImg.jpg' alt='Phone Img' className='h-[340px] w-[150px] border-2 border-solid border-black rounded-lg  '/>
