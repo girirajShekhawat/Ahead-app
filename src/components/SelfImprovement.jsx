@@ -19,7 +19,7 @@ function SelfImprovement(props) {
   `;
 
     return (
-        <div className=' flex flex-col py-[50px] my-[50px]'>
+        <div className=' flex flex-col py-[50px] my-[100px]'>
         <div className='ml-5 sm:ml-12 relative'>
         <motion.div
           initial="hidden"

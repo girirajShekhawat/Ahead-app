@@ -2,12 +2,11 @@ import React, { useState } from 'react';
 import { vacancies } from '../assets/data';
 import { motion } from 'framer-motion';
 function Jobs(props) {
-  const[onHover, setHover]=useState(false);
-  const [hoveredIndex, setHoveredIndex]=useState(null)
+ 
 
     return (
         <div>
-              <div className='flex flex-col py-[50px] my-[50px]'>
+              <div className='flex flex-col py-[50px] my-[100px]'>
            <motion.div 
            initial="hidden"
            whileInView="visible"
@@ -23,20 +22,9 @@ function Jobs(props) {
             <div className='flex gap-8 mt-12'>
                 {vacancies.map((job,index)=>{
 
-                
-              return      <HoveredCard key={index} index={index} jobs={job}/>
-              
-        //               <div className="rounded-2xl bg-[#fefbec] p-6 px-12">
-        //   <h2 className="text-xl font-bold">{job.jobTitle}</h2>
-
-        //   <ul className="mt-4 text-sm font-semibold list-disc pl-4">
-        //     <li className="text-sm font-normal mb-1">{job.position}</li>
-        //     <li className="text-sm font-normal mb-1">{job.location}</li>
-        //     <li className="text-sm font-normal">{job.pay}</li>
-        //   </ul>
-        // </div>
-        
-                     
+ 
+              return <HoveredCard key={index} index={index} jobs={job}/>
+            
             })}
       
             

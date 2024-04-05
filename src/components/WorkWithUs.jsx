@@ -4,7 +4,7 @@ import { motion, spring } from 'framer-motion';
 
 function WorkWithUs(props) {
     return (
-        <div className=' py-[10px] bg-[#f3f1ff] my-[50px] px-[30px] rounded-[23px]'>
+        <div className=' py-[10px] bg-[#f3f1ff] my-[100px] px-[30px] rounded-[23px]'>
    
            <div className='flex justify-between mb-[40px] mt-[70px]'>
 
@@ -93,39 +93,4 @@ export default WorkWithUs;
 
 
 
-{/* <div  className="p-4 bg-white rounded-2xl space-y-6 w-[20rem]">
-                <h1 className=' font-bold'>Power through, even when the going gets tough</h1>
-                <p className='text-sm'>We help you spot and work around whatever stands in the way, ve it vad habits, fear, etc.</p>
-            </div>
-            <div className="p-4 bg-white rounded-2xl space-y-6 w-[20rem]">
-                <h1 className=' font-bold' >
-                    Learn more about who you are and where you want to go.
-                </h1>
-                <p className='text-sm'>We ask the right questions to help you better understand why you do things the way you do.</p>
-            </div >
-            <div className="p-4 bg-white rounded-2xl space-y-6 w-[20rem]">
-                <h1 className=' font-bold'>
-                    Plan and grow together with others on the same journey
-                </h1>
-                <p className='text-sm'>
-                    Ahead feels like a games, not like a chore. See yourself grow everyday towards achieving your goals!
-                </p>
-            </div>
-            <div className="p-4 bg-white rounded-2xl space-y-6 w-[20rem]">
-                <h1 className=' font-bold'>Power through, even when the going gets tough</h1>
-                <p className='text-sm'>We help you spot and work around whatever stands in the way, ve it vad habits, fear, etc.</p>
-            </div>
-            <div className="p-4 bg-white rounded-2xl space-y-6 w-[20rem]">
-                <h1 className=' font-bold'>
-                    Learn more about who you are and where you want to go.
-                </h1>
-                <p className='text-sm'>We ask the right questions to help you better understand why you do things the way you do.</p>
-            </div >
-            <div className="p-4 bg-white rounded-2xl space-y-6 w-[20rem]">
-                <h1 className=' font-bold'>
-                    Plan and grow together with others on the same journey
-                </h1>
-                <p className='text-sm'>
-                    Ahead feels like a games, not like a chore. See yourself grow everyday towards achieving your goals!
-                </p>
-            </div> */}
+ 

@@ -5,7 +5,7 @@ function Test(props) {
     const text = "Team ahead app";
     return (
         <div>
-             <div className='flex flex-col items-center  py-[50px] my-[50px]'>
+             <div className='flex flex-col items-center  py-[50px] my-[100px]'>
 
                 <motion.div
                  initial="hidden"

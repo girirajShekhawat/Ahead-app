@@ -15,7 +15,7 @@ function MeetAheadApp(props) {
          duration: "1.5",
          ease: "easeInOut",
          }}
-        className='relative my-[50px]'> 
+        className='relative my-[100px]'> 
         <div className='bg-[#fef7f1] flex py-[50px] h-[450px] rounded-[23px]  overflow-hidden'>
             <div className='flex flex-col w-full  relative '>
             <span className='justify-start ml-[35px] mt-[50px]'>

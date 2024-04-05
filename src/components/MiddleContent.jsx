@@ -18,10 +18,10 @@ function MiddleContent(props) {
         <div className='pb-[50px]'>
             <MainBanner/>
         </div>
-         <div className='my-[50px] py-[50px] px-5'>
+         <div className='my-[100px] py-[50px] px-5'>
             <TextBox data={TextBoxData[0]}/>
          </div>
-         <div className='my-[50px] py-[50px]'>
+         <div className='my-[100px] py-[50px]'>
             <SideMovingBox/>
          </div>
       
@@ -33,7 +33,7 @@ function MiddleContent(props) {
           <SelfImprovement/>
             
     {/*Textbox */}        
-            <div className='py-[50px] my-[50px]'>
+            <div className='py-[50px] my-[100px]'>
             <TextBox data={TextBoxData[1]}/>
             </div>
             
