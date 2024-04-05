@@ -13,9 +13,9 @@ function Jobs(props) {
           <h2 className="text-xl font-bold">{job.jobTitle}</h2>
 
           <ul className="mt-4 text-sm font-semibold list-disc pl-4">
-            <li className="">{job.position}</li>
-            <li className="">{job.location}</li>
-            <li className="">{job.pay}</li>
+            <li className="text-sm font-normal mb-1">{job.position}</li>
+            <li className="text-sm font-normal mb-1">{job.location}</li>
+            <li className="text-sm font-normal">{job.pay}</li>
           </ul>
         </div>
                      

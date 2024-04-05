@@ -3,7 +3,7 @@ import TextBox from './TextBox';
 import MainBanner from './MainBanner';
 import SideMovingBox from './SideMovingBox';
 import "../App.css";
-import { selfImprovementElementData  } from '../assets/data';
+import {  TextBoxData } from '../assets/data';
 import Jobs from './Jobs';
 import SelfImprovement from './SelfImprovement';
 import WorkWithUs from './WorkWithUs';
@@ -18,7 +18,7 @@ function MiddleContent(props) {
             <MainBanner/>
         </div>
          <div className='my-[50px] py-[50px] px-5'>
-            <TextBox/>
+            <TextBox data={TextBoxData[0]}/>
          </div>
          <div className='my-[50px] py-[50px]'>
             <SideMovingBox/>
@@ -33,7 +33,7 @@ function MiddleContent(props) {
             
     {/*Textbox */}        
             <div className='py-[50px] my-[50px]'>
-            <TextBox/>
+            <TextBox data={TextBoxData[1]}/>
             </div>
             
 
