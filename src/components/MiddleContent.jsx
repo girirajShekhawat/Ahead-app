@@ -8,6 +8,7 @@ import Jobs from './Jobs';
 import SelfImprovement from './SelfImprovement';
 import WorkWithUs from './WorkWithUs';
 import MeetAheadApp from './MeetAheadApp';
+import Test from './Test';
 
 function MiddleContent(props) {
     
@@ -44,22 +45,7 @@ function MiddleContent(props) {
 
 
          {/*Before you get started*/}
-           <div className='flex flex-col items-center  py-[50px] my-[50px]'>
-            <p className='text-sm font-bold  '>We take privacy seriously</p>
-            <h1 className='font-[700] text-[30px] leading-[29px] font-sans mt-[12px]'>Before you get started</h1>
-            <p className="text-xl font-normal mt-[12px] text-wrap mx-[90px] items-center leading-[29px] text-center ">"We won't share your answers with anyone(and  won't ever tell you  which friends said about you)"  </p>
-            
-            <p className='text-sm font-bold mt-[17px] '>with love, 
-                {/* here we need the aniamtion*/}
-                <span>Team ahead app</span>
-            </p>
-           
-            <div className='h-[40px] w-[127px]   bg-[#0d0c22] rounded-full   flex items-center pl-[20px] pr-[20px]  ml-[12px] mt-[27px]'>
-                <button className='text-[13px] text-white h-[38px] w-[87px] leading-[13px] font-sans font-[600]'>Start a test</button>
-            </div>
-            <p className='text-sm mt-[10px]'>Takes only 5 minutes</p>
-
-           </div>
+           <Test/>
 
 
            {/* Work with us banner */}
