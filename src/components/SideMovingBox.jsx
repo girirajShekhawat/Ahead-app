@@ -2,8 +2,9 @@ import React from 'react';
 
 function SideMovingBox(props) {
     return (
-        <div className='   h-[300px]'>
+        <div className=' relative  h-[300px]'>
             <h1 className=' font-[700] text-[30px] leading-[29px] font-sans ml-[30px] mb-[40px]  '>Does this sound familiar...</h1>
+            <img src='src\assets\TeddyImage.svg' alt='teddyImg' className='h-[80px] w-[70px]  absolute -top-[30px] right-[170px] -rotate-[19deg]'/>
 
 <div className='flex justify-between items-center h-[220px]   overflow-x-auto w-[1000px] no-scrollbar '>
     <div className='bg-[#eeebfe] mx-[10px] rounded-xl pl-[30px] pr-[30px] pt-[30px] pb-[10px]  h-[180px] min-w-[280px]   '>
