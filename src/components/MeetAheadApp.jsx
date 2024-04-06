@@ -150,11 +150,11 @@ function MeetAheadApp(props) {
             }}
             className='h-[44px] w-[44px] absolute left-[150px] bottom-[150px] z-10'
           >
-                <img src='src\assets\sun badge.webp' alt="sun image"/>
+                <img src='/sun badge.webp' alt="sun image"/>
 
              </motion.div>
             <div className=' absolute left-[100px] bottom-[30px]  h-[150px] w-[150px] rounded-full border-[10px] border-solid border-[#f4f6f6] bg-white'>
-                <img src='src\assets\TeddyImg2.svg' alt='teddyImg' className='  mix-blend-multiply'/>
+                <img src='/TeddyImg2.svg' alt='teddyImg' className='  mix-blend-multiply'/>
             </div>
             </div>
             <div className='flex flex-col w-full justify-center items-start mt-[100px] mr-[50px]  '>
@@ -178,7 +178,7 @@ function MeetAheadApp(props) {
         className="  h-[48px] w-[48px] absolute right-[56px] -top-[27px] "   
       > 
                  
-                    <img src='src\assets\flowerImg.webp' alt='flowerImg' />
+                    <img src='/flowerImg.webp' alt='flowerImg' />
                  
          </motion.div>
                 {/* leaf element */}

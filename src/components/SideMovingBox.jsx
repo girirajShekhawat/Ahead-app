@@ -73,7 +73,7 @@ function SideMovingBox(props) {
           }}
           transition={{ duration: 2.1, ease: "easeInOut", type: "spring",delay:0.3 }}
         >
-            <img src='src\assets\TeddyImage.svg' alt='teddyImg' className='h-[80px] w-[70px]  absolute -top-[30px] right-[170px] -rotate-[19deg]'/>
+            <img src='/TeddyImage.svg' alt='teddyImg' className='h-[80px] w-[70px]  absolute -top-[30px] right-[170px] -rotate-[19deg]'/>
          </motion.div>
 
 <div className='flex justify-between items-center h-[220px]   overflow-x-auto w-[1000px] no-scrollbar  '  ref={boxContainerRef} >

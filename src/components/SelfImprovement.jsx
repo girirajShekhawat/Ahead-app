@@ -53,7 +53,7 @@ function SelfImprovement(props) {
           }}
           className=' absolute   lg:top-[20px] lg:-right-[20px] rotate-1 '
         >
-            <img src='src\assets\blue-ghost.webp' alt='teddyImg' className='h-[70px] w-[70px]      '/>
+            <img src='/blue-ghost.webp' alt='teddyImg' className='h-[70px] w-[70px]      '/>
        </motion.div>
         </div>
         <div className=' '>

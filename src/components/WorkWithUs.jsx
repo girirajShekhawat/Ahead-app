@@ -53,7 +53,7 @@ function WorkWithUs(props) {
                        
 
                  >
-                <img src='src\assets\newGhost.png' alt='teddy Img' className='h-[70px] w-[60px] -ml-1  '/>
+                <img src='/newGhost.png' alt='teddy Img' className='h-[70px] w-[60px] -ml-1  '/>
                 </motion.div>
                  
                 <h1 className="font-bold text-lg mt-1">About</h1>

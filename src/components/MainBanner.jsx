@@ -123,11 +123,11 @@ function MainBanner(props) {
                  className='h-[30px] w-[30px] rounded-full bg-[#e86858] absolute left-[200px] -bottom-[133px]'></motion.div>
                  
                 <div className='flex items-center   gap-5'>
-                    <img src="src\assets\downloadIcon.png" alt='download Icon' className='h-[100px] w-[100px]   '/>
+                    <img src="/downloadIcon.png" alt='download Icon' className='h-[100px] w-[100px]   '/>
                     <div className='flex flex-col mb-2'>
                         <div className='flex '> 
                         {[...Array(5)].map((star)=>(
-                      <img src='src\assets\starIcon.svg' alt='Rating Icon' className='h-[16px]    '/>
+                      <img src='/starIcon.svg' alt='Rating Icon' className='h-[16px]    '/>
                         ))}
                          </div>  
                         
@@ -170,11 +170,11 @@ function MainBanner(props) {
                  animate={{ rotate: 360 }} 
                  transition={{ type: "spring", duration: 4, bounce: 0.4 }}
                  className='absolute top-4 right-9 -rotate-[40deg]'>
-                <img src='src\assets\TeddyImage.svg' alt='teddyImg' className='h-[70px] w-[70px]   '/></motion.div>
-                <img src='src\assets\newGhost.png' alt='teddyImg' className='h-[70px] w-[70px]  absolute top-5 left-9 rotate-[220deg]'/>
-                <img src='src\assets\blue-ghost.webp' alt='teddyImg' className='h-[70px] w-[70px]  absolute -bottom-[30px] left-[190px] rotate-1 '/>
-                <img src='src\assets\blue-ghost.webp' alt='teddyImg' className='h-[30px] w-[30px]  absolute bottom-[90px] left-[390px] rotate-5 '/>
-                <img src='src\assets\TeddyImage.svg' alt='teddyImg' className='h-[40px] w-[40px]  absolute top-[190px] -left-[20px] -rotate-[4 deg]'/>
+                <img src='/TeddyImage.svg' alt='teddyImg' className='h-[70px] w-[70px]   '/></motion.div>
+                <img src='/newGhost.png' alt='teddyImg' className='h-[70px] w-[70px]  absolute top-5 left-9 rotate-[220deg]'/>
+                <img src='/blue-ghost.webp' alt='teddyImg' className='h-[70px] w-[70px]  absolute -bottom-[30px] left-[190px] rotate-1 '/>
+                <img src='/blue-ghost.webp' alt='teddyImg' className='h-[30px] w-[30px]  absolute bottom-[90px] left-[390px] rotate-5 '/>
+                <img src='/TeddyImage.svg' alt='teddyImg' className='h-[40px] w-[40px]  absolute top-[190px] -left-[20px] -rotate-[4 deg]'/>
                 <motion.div
                 initial="hidden"
                 whileInView="visible"
@@ -184,8 +184,8 @@ function MainBanner(props) {
                 }}
                 transition={{type:spring,bounce:0.3,delay:0.2, duration:2 ,ease:"easeInOut"}}>
                 <div className='bg-[#e2dbfd] flex h-[310px] w-[310px] rounded-full items-center  justify-start  object-contain'>
-                    <img src='src\assets\aheadAppAssets.jpg' alt="Vaochar Img" className='h-[120px] w-[120px] rounded-lg '/>
-                    <img src='src\assets\AheadAppHomeImg.jpg' alt='Phone Img' className='h-[340px] w-[150px] border-2 border-solid border-black rounded-lg  '/>
+                    <img src='/aheadAppAssets.jpg' alt="Vaochar Img" className='h-[120px] w-[120px] rounded-lg '/>
+                    <img src='/AheadAppHomeImg.jpg' alt='Phone Img' className='h-[340px] w-[150px] border-2 border-solid border-black rounded-lg  '/>
                 </div>
                 </motion.div>
                 </motion.div>
