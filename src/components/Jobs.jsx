@@ -27,10 +27,14 @@ const [currentJob,setCurrentJob]=useState(intialState)
 
 const handleSubmit=(event)=>{
   event.preventDefault();
-  setJobdata([
-    ...jobData,
-    currentJob
-  ]) 
+  //  check for all the field should be filled
+  if(currentJob.jobTitle && currentJob.location && currentJob.pay && currentJob.position){
+    setJobdata([
+      ...jobData,
+      currentJob
+    ]) 
+  }
+  
   setCurrentJob(intialState)
   setjobBox(false)
 }
@@ -80,7 +84,7 @@ function handleJobAdding(){
        {/* handling the jobs data div  */}
         <div className='flex  w-full  overflow-x-scroll no-scrollbar   gap-8 mt-12'>
           {jobData.map((job, index) => {
-            return <HoveredCard key={index} index={index} jobs={job} jobData={jobData} setJobdata={setJobdata}/>
+            return <HoveredCard key={index} index={index} jobs={job} jobData={jobData} setJobdata={setJobdata} isadmin={isadmin}/>
           })}
         </div>
       </div>
@@ -163,7 +167,7 @@ function handleJobAdding(){
 
 // hovered card component
 const HoveredCard = (props) => {
-  const{index, jobs, jobData , setJobdata}=props;
+  const{index, jobs, jobData , setJobdata,isadmin}=props;
   const intialState= {
     jobTitle: "",
     position: "",
@@ -188,9 +192,10 @@ const HoveredCard = (props) => {
 
   function handleSubmit(e){
     e.preventDefault();
-   
+    if(currentJob.jobTitle && currentJob.location && currentJob.pay && currentJob.position){
     jobData[index]=currentJob;
     setJobdata([...jobData])
+    }
     setOpen(false)
     
   }
@@ -221,14 +226,14 @@ const HoveredCard = (props) => {
       >
          <div className="rounded-2xl flex flex-col w-[339px]  ">
        
-       <div className='flex justify-end'>
+      {isadmin && <div className='flex justify-end'>
        <IconButton aria-label="edit" size="large" onClick={handleJobEdit}>
        <EditIcon />
       </IconButton>
       <IconButton aria-label="delete" size="large" onClick={handleJobDelete} key={index}>
        <ClearIcon />
       </IconButton>
-       </div>
+       </div>}
 
        <div className='px-12 mb-4 '>
          <h2 className="text-xl font-bold">{jobs.jobTitle}</h2>
@@ -257,7 +262,7 @@ const HoveredCard = (props) => {
         }
 
         {/* popup container for the job detailes add */}
-      { open && 
+      { isadmin && open && 
            <Dialog open={open}
             >
                 <DialogTitle>Add a new job</DialogTitle>
