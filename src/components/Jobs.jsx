@@ -2,6 +2,12 @@
 import React, { useState } from 'react';
 import { vacancies } from '../assets/data';
 import { motion } from 'framer-motion';
+import  {TextField,Button} from "@mui/material"
+import Dialog from '@mui/material/Dialog';
+import DialogTitle from '@mui/material/DialogTitle';
+import DialogContent from '@mui/material/DialogContent';
+import DialogActions from '@mui/material/DialogActions';
+
 
 function Jobs({isadmin}) {
   const data=vacancies;
@@ -33,6 +39,10 @@ const handleChange=(event)=>{
   })
 }
 
+const handleChangeForJobBoxDisplay=()=>{
+  setjobBox(!showJobBox)
+}
+
 
 function handleJobAdding(){
   setjobBox(!showJobBox)
@@ -40,7 +50,8 @@ function handleJobAdding(){
 
   return (
     <div>
-      <div className='flex flex-col py-[50px] my-[100px]'>
+      <div className='flex flex-col py-[50px] my-[100px] h-full'>
+        
         <motion.div 
           initial="hidden"
           whileInView="visible"
@@ -48,32 +59,91 @@ function handleJobAdding(){
           transition={{ duration: 1.7, type: "spring", bounce: 0.4, ease: "easeInOut" }}
           variants={{
             visible: { opacity: 1, scale: 1, x: 0, y: 0 },
-            hidden: { opacity: 0, scale: 0.5, x: "-50%" },
+            hidden: { opacity: 0, scale: 0.5, x: "-5%" },
           }}
+          className='flex justify-between'
         >
           <h1 className='text-4xl font-bold'>Open vacancies</h1>
+
+           {/* handling the add job button */}
+          {isadmin && 
+        <Button variant='contained' onClick={handleJobAdding} className='bg-black rounded-full' >Add Jobs</Button>  }
+     
         </motion.div>
-        {isadmin && 
-  <button onClick={handleJobAdding}>Add Jobs</button>}
-        <div className='flex gap-8 mt-12'>
+ 
+       {/* handling the jobs data div  */}
+        <div className='flex   overflow-x-auto no-scrollbar   gap-8 mt-12'>
           {jobData.map((job, index) => {
             return <HoveredCard key={index} index={index} jobs={job}/>
           })}
         </div>
       </div>
 
+{/* popup container for the job detailes add */}
       {showJobBox && 
- 
-        <div className='h-[400px] w-[400px] z-10 bg-blue-100 '>
-        <form onSubmit={handleSubmit}>
-          <input type='text'  placeholder='Job Heading' name='jobTitle' value={currentJob.jobTitle} onChange={handleChange} />
-          <input type='text' placeholder='Job Location ' name='position' value={currentJob.position} onChange={handleChange}/>
-          <input type='text' placeholder='Salary' name='location'  value={currentJob.location} onChange={handleChange} />
-          <input type='text' placeholder='Job Type' name='pay'  value={currentJob.pay} onChange={handleChange}/>
-          <button type='submit'>Submit</button>
-        </form>
-        </div>}
-    </div>
+           <Dialog open={open}>
+                <DialogTitle>Add a new job</DialogTitle>
+                <DialogContent className='flex flex-col'>
+                 
+      <form onSubmit={handleSubmit}  >
+        <TextField
+          type='text'
+          placeholder='Job Heading'
+          name='jobTitle'
+          value={currentJob.jobTitle}
+          onChange={handleChange}
+          fullWidth
+          size='medium'
+          margin='normal'
+        /><br/>
+        <TextField
+          type='text'
+          placeholder='Job Type'
+          name='position'
+          value={currentJob.position}
+          fullWidth
+          size='medium'
+          onChange={handleChange}
+          
+          margin='normal'
+        />
+        <TextField
+          type='text'
+          placeholder='Location'
+          name='location'
+          value={currentJob.location}
+          onChange={handleChange}
+          fullWidth
+          size='medium'
+          margin='normal'
+        />
+        <TextField
+          type='text'
+          placeholder='Salary'
+          name='pay'
+          value={currentJob.pay}
+          onChange={handleChange}
+          fullWidth
+          size='medium'
+          margin='normal'
+        />
+
+        <DialogActions>
+        <Button type='submit' variant='contained' color='primary'>
+          Submit
+        </Button>
+        <Button   variant='contained' color='primary' onClick={handleChangeForJobBoxDisplay}>
+          Cancel
+        </Button>
+        </DialogActions>
+
+      </form>
+   
+                </DialogContent>
+           </Dialog>
+
+         }
+</div>
      
        
   );
@@ -125,3 +195,27 @@ const HoveredCard = ({ index, jobs }) => {
 }
 
 export default Jobs;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{/* <div className='h-[400px] w-[400px] z-10 bg-blue-100 '>
+        <form onSubmit={handleSubmit}>
+          <input type='text'  placeholder='Job Heading' name='jobTitle' value={currentJob.jobTitle} onChange={handleChange} />
+          <input type='text' placeholder='Job Location ' name='position' value={currentJob.position} onChange={handleChange}/>
+          <input type='text' placeholder='Salary' name='location'  value={currentJob.location} onChange={handleChange} />
+          <input type='text' placeholder='Job Type' name='pay'  value={currentJob.pay} onChange={handleChange}/>
+          <button type='submit'>Submit</button>
+        </form>
+        </div> */}
