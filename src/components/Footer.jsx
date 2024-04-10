@@ -22,7 +22,7 @@ function Footer(props) {
                 </span>
             </div>
             <div>
-            <img src="src\assets\downloadIcon.png" alt='download Icon' className='h-[100px] w-[100px] object-contain'/>
+            <img src="/downloadIcon.png" alt='download Icon' className='h-[100px] w-[100px] object-contain'/>
             </div>
             <p className='text-sm'>&copy; {new Date().getFullYear()} Ahead app. All right reserved</p>
              
