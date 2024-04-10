@@ -1,4 +1,3 @@
- 
 import React, { useState } from 'react';
 import { vacancies } from '../assets/data';
 import { motion } from 'framer-motion';
@@ -7,6 +6,11 @@ import Dialog from '@mui/material/Dialog';
 import DialogTitle from '@mui/material/DialogTitle';
 import DialogContent from '@mui/material/DialogContent';
 import DialogActions from '@mui/material/DialogActions';
+import ClearIcon from '@mui/icons-material/Clear';
+import EditIcon from '@mui/icons-material/Edit';
+import IconButton from '@mui/material/IconButton';
+
+
 
 
 function Jobs({isadmin}) {
@@ -48,6 +52,8 @@ function handleJobAdding(){
   setjobBox(!showJobBox)
 }
 
+ 
+
   return (
     <div>
       <div className='flex flex-col py-[50px] my-[100px] h-full'>
@@ -72,9 +78,9 @@ function handleJobAdding(){
         </motion.div>
  
        {/* handling the jobs data div  */}
-        <div className='flex   overflow-x-auto no-scrollbar   gap-8 mt-12'>
+        <div className='flex  w-full  overflow-x-scroll no-scrollbar   gap-8 mt-12'>
           {jobData.map((job, index) => {
-            return <HoveredCard key={index} index={index} jobs={job}/>
+            return <HoveredCard key={index} index={index} jobs={job} jobData={jobData} setJobdata={setJobdata}/>
           })}
         </div>
       </div>
@@ -149,14 +155,63 @@ function handleJobAdding(){
   );
 }
 
+
+
+
+
+
+
 // hovered card component
-const HoveredCard = ({ index, jobs }) => {
+const HoveredCard = (props) => {
+  const{index, jobs, jobData , setJobdata}=props;
+  const intialState= {
+    jobTitle: "",
+    position: "",
+    location: "",
+    pay: "",
+  }
   const [showButton, setShowButton] = useState(false);
+  const [ open, setOpen]=useState(false);
+  const [currentJob,setCurrentJob]=useState(intialState)
+
+  function handleJobDelete (){
+    const indexTobeRemoved=index;
+    if(indexTobeRemoved>=0 && indexTobeRemoved<jobData.length){
+     const newJobData= jobData.filter((job,index)=> index!==indexTobeRemoved);
+     setJobdata(newJobData)}
+  }
+
+  function handleJobEdit(){
+    const jobIndex=index
+    setOpen(!open)
+  }
+
+  function handleSubmit(e){
+    e.preventDefault();
+   
+    jobData[index]=currentJob;
+    setJobdata([...jobData])
+    setOpen(false)
+    
+  }
+
+  function handleChange(event){
+    const {name,value}=event.target;
+
+    setCurrentJob({
+     ...currentJob,
+     [name]:value
+    })
+  }
+
+  function handleChangeForJobBoxDisplay (){
+    setOpen(!open)
+  }
 
   return (
     <>
       <motion.div
-        initial={{ height: 160 }}
+        initial={{ height: 190}}
         whileHover={{ height: 230 }}
         key={index}
         onHoverStart={() => setShowButton(true)}
@@ -164,15 +219,27 @@ const HoveredCard = ({ index, jobs }) => {
         transition={{ ease: "easeInOut", duration: 0.2 }}
         className='bg-[#fefbec] hover:bg-[#ece7d1] rounded-lg  cursor-pointer '
       >
-        <div className="rounded-2xl p-6 px-12">
-          <h2 className="text-xl font-bold">{jobs.jobTitle}</h2>
+         <div className="rounded-2xl flex flex-col w-[339px]  ">
+       
+       <div className='flex justify-end'>
+       <IconButton aria-label="edit" size="large" onClick={handleJobEdit}>
+       <EditIcon />
+      </IconButton>
+      <IconButton aria-label="delete" size="large" onClick={handleJobDelete} key={index}>
+       <ClearIcon />
+      </IconButton>
+       </div>
 
-          <ul className="mt-4 text-sm font-semibold list-disc pl-4">
-            <li className="text-sm font-normal mb-1">{jobs.position}</li>
-            <li className="text-sm font-normal mb-1">{jobs.location}</li>
-            <li className="text-sm font-normal">{jobs.pay}</li>
-          </ul>
-        </div>
+       <div className='px-12 mb-4 '>
+         <h2 className="text-xl font-bold">{jobs.jobTitle}</h2>
+
+         <ul className="mt-4 text-sm font-semibold list-disc pl-4">
+           <li className="text-sm font-normal mb-1">{jobs.position}</li>
+           <li className="text-sm font-normal mb-1">{jobs.location}</li>
+           <li className="text-sm font-normal">{jobs.pay}</li>
+         </ul>
+         </div>
+       </div>
 
         {showButton && 
           <motion.button
@@ -183,15 +250,80 @@ const HoveredCard = ({ index, jobs }) => {
               visible: { opacity: 1, scale: 1 },
               hidden: { opacity: 0, scale: 0.7 },
             }}
-            className="mx-12 cursor-pointer text-white bg-black rounded-full px-3 py-2 mt-3"
+            className="mx-12 cursor-pointer text-white bg-black rounded-full px-3 py-2 mt-2"
           >
             Apply
           </motion.button>
         }
 
+        {/* popup container for the job detailes add */}
+      { open && 
+           <Dialog open={open}
+            >
+                <DialogTitle>Add a new job</DialogTitle>
+                <DialogContent className='flex flex-col'>
+                 
+      <form onSubmit={handleSubmit}  >
+        <TextField
+          type='text'
+          placeholder={jobs.jobTitle}
+          name='jobTitle'
+          value={currentJob.jobTitle}
+          onChange={handleChange}
+          fullWidth
+          size='medium'
+          margin='normal'
+        /><br/>
+        <TextField
+          type='text'
+          placeholder={jobs.position}
+          name='position'
+          value={currentJob.position}
+          fullWidth
+          size='medium'
+          onChange={handleChange}
+          
+          margin='normal'
+        />
+        <TextField
+          type='text'
+          placeholder={jobs.location}
+          name='location'
+          value={currentJob.location}
+          onChange={handleChange}
+          fullWidth
+          size='medium'
+          margin='normal'
+        />
+        <TextField
+          type='text'
+          placeholder={jobs.pay}
+          name='pay'
+          value={currentJob.pay}
+          onChange={handleChange}
+          fullWidth
+          size='medium'
+          margin='normal'
+        />
+
+        <DialogActions>
+        <Button type='submit' variant='contained' color='primary'>
+          Submit
+        </Button>
+        <Button   variant='contained' color='primary' onClick={handleChangeForJobBoxDisplay}>
+          Cancel
+        </Button>
+        </DialogActions>
+
+      </form>
+   
+                </DialogContent>
+           </Dialog>
+     }
       </motion.div>
     </>
   );
+
 }
 
 export default Jobs;
@@ -219,3 +351,23 @@ export default Jobs;
           <button type='submit'>Submit</button>
         </form>
         </div> */}
+
+
+
+      //   <div className="rounded-2xl p-6 px-12">
+       
+      //   <IconButton aria-label="delete" size="large">
+      //   <ClearIcon />
+      //  </IconButton>
+      //  <IconButton aria-label="delete" size="large">
+      //   <EditIcon />
+      //  </IconButton>
+
+      //     <h2 className="text-xl font-bold">{jobs.jobTitle}</h2>
+
+      //     <ul className="mt-4 text-sm font-semibold list-disc pl-4">
+      //       <li className="text-sm font-normal mb-1">{jobs.position}</li>
+      //       <li className="text-sm font-normal mb-1">{jobs.location}</li>
+      //       <li className="text-sm font-normal">{jobs.pay}</li>
+      //     </ul>
+      //   </div>
